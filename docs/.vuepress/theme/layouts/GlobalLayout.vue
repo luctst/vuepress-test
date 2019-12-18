@@ -1,7 +1,7 @@
 <template>
-  <div id="moonshot-theme" class="container">
+  <div id="moonshot-theme">
     <Header/>
-    <!-- <component :is="layout"/> -->
+    <component :is="layout"/>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     }
   },
   mounted() {
-    document.querySelector("body").style = "padding:0;margin:0;";
+    document.querySelector("body").style = "padding:0;margin:0;overflow:hidden;";
   }
 }
 </script>
