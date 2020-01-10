@@ -166,6 +166,12 @@ header {
         div:first-child {
             width: 25%;
         }
+
+        ul {
+            li {
+                color: #fff;
+            }
+        }
     }
 }
 

@@ -1,13 +1,18 @@
 <template>
-    <FloatLine/>
+    <main>
+        <AssuranceContextuelle/>
+        <ProtectionClient />
+    </main>
 </template>
 
 <script>
-import FloatLine from "../components/FloatLine";
+import AssuranceContextuelle from "../components/AssuranceContextuelle";
+import ProtectionClient from "../components/ProtectionClient";
 
 export default {
     components: {
-        FloatLine
+        AssuranceContextuelle,
+        ProtectionClient
     }
 }
 </script>

@@ -1,15 +1,25 @@
 <template>
     <section>
         <div class="container">
-            <h1>Moonshot-internet<br/> notre nouvelle<br/> punchline de fou</h1>
-            <h2>La 1ère assurtech qui propose des produits d’assurance customisés et contextualisés de manière simple et accessible !</h2>
+            <h1 v-html="title"></h1>
+            <h2>{{description}}</h2>
             <button>En savoir plus</button>
         </div>
         <div>
-            <img src="group-5@2x.png" alt="icone"/>
+            <img :src="image" alt="icone"/>
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    props: {
+        title: String,
+        description: String,
+        image: String
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 section {
@@ -48,6 +58,18 @@ section {
             width: 100%;
             height: auto;
             object-fit: contain;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        display: flex;
+        padding-top: 5em;
+
+        div:first-child {
+            margin-top: 4em;
+            margin-left: 4em;
         }
     }
 }
