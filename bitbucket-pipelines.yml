@@ -1,5 +1,4 @@
 image: moonshotinternet/ci-scripts
-run-as-user: ciuser
 pipelines:
   default:
     - step:
