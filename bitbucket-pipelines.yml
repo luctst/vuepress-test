@@ -1,0 +1,23 @@
+image: moonshotinternet/ci-scripts
+run-as-user: ciuser
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install
+          - BUILD_ENV=staging load-aws-credentials.sh
+  branches:
+    develop:
+      - step:
+          caches:
+            - node
+          script:
+            - npm install
+            - BUILD_ENV=staging load-aws-credentials.sh
+            - npm rebuild node-sass --force
+            - npm run docs:build
+            - echo "Will deploy to staging"
+            - aws s3 sync ./.vuepress/dist/ s3://refonte-b2b.mnshot.net --acl public-read
+            # - aws cloudfront create-invalidation --distribution-id E2Q48PS7OF5T8H --paths '/*'
