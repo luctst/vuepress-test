@@ -29,7 +29,7 @@
 export default {
     data () {
         return {
-            width: window.innerWidth,
+            // width: window.innerWidth,
             showNavigation: false
         }
     },
