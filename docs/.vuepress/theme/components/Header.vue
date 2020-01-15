@@ -30,7 +30,6 @@ export default {
     data () {
         return {
             // width: window.innerWidth,
-            t: "",
             showNavigation: false
         }
     },
