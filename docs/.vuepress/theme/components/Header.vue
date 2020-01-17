@@ -1,13 +1,14 @@
 <template>
     <header ref="header" class="container">
         <div>
-            <img src="logo-moonshot@2x.png"/>
+            <img src="logo-moonshot@2x.png" class="logo--sm"/>
+            <img src="white@2x.png" class="logo--desktop"/>
         </div>
         <nav>
-            <button v-if="width <= 768" @click="showNavigation = !showNavigation">
+            <button @click="showNavigation = !showNavigation" class="btn--burger">
                 <img src="burger-menu@2x.png"/>
             </button>
-            <div v-if="width <= 768 && showNavigation" class="container">
+            <div v-if="showNavigation" class="container nav--sm">
                 <ul>
                     <li>Nos produits</li>
                     <li>Nos solutions</li>
@@ -15,7 +16,7 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <ul v-if="width > 768" class="nav-desktop">
+            <ul class="nav-desktop">
                 <li>Nos produits</li>
                 <li>Nos solutions</li>
                 <li>Qui sommes-nous ?</li>
@@ -29,13 +30,7 @@
 export default {
     data () {
         return {
-            // width: window.innerWidth,
             showNavigation: false
-        }
-    },
-    mounted() {
-        if (this.width <= 768) {
-            this.$refs.header.style = "background-color:#fff;"
         }
     }
 }
@@ -61,9 +56,6 @@ header {
     }
 
     nav {
-        display: flex;
-        justify-content: flex-end;
-
         button {
             background: transparent;
             border: none;
@@ -120,6 +112,9 @@ header {
     }
 }
 
+/**
+* Media queries
+*/
 @media screen and (max-width: 350px) {
     header {
         nav {
@@ -138,9 +133,35 @@ header {
     }
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        background-color: #fff;
+        width: 100%;
+        
+        div:first-child {
+            .logo--sm {
+                display: block;
+            }
+
+            .logo--desktop {
+                display: none;
+            }
+        }
+
+        nav {
+            .btn--burger {
+                display: block;
+            }
+
+            .nav-desktop {
+                display: none;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 400px) {
     header {
-
         div:first-child {
             width: 50%;
         }
@@ -165,9 +186,25 @@ header {
     header {
         div:first-child {
             width: 25%;
+
+            .logo--sm {
+                display: none;
+            }
+
+            .logo--desktop {
+                display: block;
+            }            
         }
 
-        ul {
+        nav {
+            .btn--burger {
+                display: none;
+            }
+        }
+
+        .nav-desktop {
+            display: flex;
+
             li {
                 color: #fff;
             }
