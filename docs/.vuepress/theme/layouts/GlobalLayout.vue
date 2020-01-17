@@ -7,6 +7,7 @@
       :image="floatLineImage"
     />
     <component :is="layout"/>
+    <Newsletter />
     <Footer/>
   </div>
 </template>
@@ -14,12 +15,14 @@
 <script>
 import Header from "../components/Header";
 import FloatLine from "../components/FloatLine";
+import Newsletter from "../components/Newletter";
 import Footer from "../components/Footer";
 
 export default {
   components: {
     Header,
     FloatLine,
+    Newsletter,
     Footer
   },
   computed: {
@@ -51,7 +54,7 @@ export default {
       default:
         break;
     }
-    document.querySelector("body").style = "padding:0;margin:0;";
+    document.querySelector("body").style = "padding:0;margin:0;overflow-x:hidden;";
   }
 }
 </script>
