@@ -1,5 +1,5 @@
 <template>
-    <section class="container newsletter">
+    <section class="container newsletter wrapper">
         <div class="newsletter--background">
             <div class="newsletter--content">
                 <h2>Souscrivez à la moonletter</h2>
