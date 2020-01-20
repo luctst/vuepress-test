@@ -25,20 +25,18 @@ export default {
 section {
     background-image: linear-gradient(to right, #000dff 0%, rgba(6, 15, 178, 0.99) 100%);
     height: 100vh;
-    padding-top: 7em;
 
     div:first-child {
         h1 {
             color: #fff;
+            line-height: 1.5;
             margin: 0;
         }
 
         h2 {
             color: #fff;
-            font-size: .8em;
             font-weight: normal;
             line-height: 1.5;
-            margin: 2em 0;
         }
 
         button {
@@ -48,7 +46,6 @@ section {
             background-color: #d8d8d8;
             border: none;
             color: #fff;
-            margin: 0;
             padding: 12px 24px;
         }
     }
@@ -62,10 +59,26 @@ section {
     }
 }
 
+@media screen and (min-width: 300px) {
+    section {
+        padding-top: 7em;
+
+        div:first-child {
+            h1 {
+                font-size: 1.9em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+                margin: 8% 0;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     section {
         display: flex;
-        padding-top: 5em;
 
         div:first-child {
             margin-top: 4em;
