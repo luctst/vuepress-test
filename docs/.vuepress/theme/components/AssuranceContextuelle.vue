@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section class="container wrapper">
         <h2>Une assurance contextuelle hyperciblée</h2>
         <p>Convaincu que l’assurance doit être claire, apporter une valeur manifeste au client et s’intégrer facilement dans son quotidien, Moonshot-Internet propose une approche innovante en se concentrant sur l’expérience client et l’immédiateté.</p>
         <div class="assurance--list">
@@ -38,7 +38,6 @@
 <style lang="scss" scoped>
 h2 {
     color: #38393f;
-    font-size: 32px;
     font-weight: bold;
     line-height: 1.25;
     text-align: center;
@@ -56,7 +55,6 @@ p {
 
     .assurance--list--item {
         img {
-            width: 20%;
             height: auto;
             object-fit: contain;
         }
@@ -64,8 +62,7 @@ p {
         div {
             h3 {
                 color: #38393f;
-                font-size: 24px;
-                font-weight: 500;
+                font-weight: 600;
             }
 
             p {
@@ -76,40 +73,127 @@ p {
     }
 }
 
-@media screen and (max-width:768px) {
-    .assurance--list {
-        .assurance--list--item {
-            text-align: center;
+@media screen and (min-width: 300px) {
+    section {
+        h2 {
+            font-size: 2.1em;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+        .assurance--list {
+            .assurance--list--item {
+                margin-top: 10%;
+                text-align: center;
+
+                img {
+                    width: 30%;
+                }
+
+                div {
+                    h3 {
+                        font-size: 1.6em;
+                    }
+                }
+            }
         }
     }
 }
 
-@media screen and (min-width:800px) {
-    .assurance--list {
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 7%;
-
-        .assurance--list--item {
-            align-items: center;
-            display: flex;
-            flex: 0 0 50%;
-            margin-bottom: 7%;
-
-            img {
-                width: 50%;
-            }
-
-            div {
-                margin-left: 3%;
-
-                h3, 
-                p {
-                    text-align: left;
+@media screen and (min-width: 470px) {
+    section {
+        .assurance--list {
+            .assurance--list--item {
+                img {
+                    width: 25%;
                 }
 
-                h3 {
-                    margin: 0;
+                div {
+                    h3 {
+                        font-size: 1.8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:790px) {
+    section {
+        h2 {
+            font-size: 2.3em;
+        }
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    section {
+        .assurance--list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 7%;
+
+            .assurance--list--item {
+                align-items: center;
+                display: flex;
+                flex: 0 0 45%;
+                margin-bottom: 7%;
+
+                img {
+                    margin-right: 4%;
+                    width: 55%;
+                }
+
+                div {
+                    h3, 
+                    p {
+                        text-align: left;
+                    }
+
+                    h3 {
+                        font-size: 1.5em;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 990px) {
+    section {
+        .assurance--list {
+            .assurance--list--item {
+                margin: 3% 0;
+
+                img {
+                    width: 50%;
+                }
+
+                div {
+                    h3 {
+                        font-size: 1.8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section {
+        .assurance--list {
+            .assurance--list--item {
+                img {
+                    width: 30%;
                 }
             }
         }
