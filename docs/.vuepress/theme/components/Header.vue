@@ -184,6 +184,8 @@ header {
 
 @media screen and (min-width: 768px) {
     header {
+        width: -moz-available;
+
         div:first-child {
             width: 25%;
 
