@@ -46,6 +46,7 @@ header {
     margin: 0 auto;
     padding: 0 15px;
     width: inherit;
+    z-index: 1;
 
     div:first-child {
         img {
@@ -115,8 +116,11 @@ header {
 /**
 * Media queries
 */
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 300px) {
     header {
+        div:first-child {
+            width: 40%;
+        }
         nav {
             button {
                 width: 35%;
@@ -125,10 +129,32 @@ header {
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (min-width:400px) {
     header {
         div:first-child {
-            width: 50%;
+            width: 35%;
+        }
+
+        nav {
+            button {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    header {
+        div:first-child {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        div:first-child {
+            width: 30%;
         }
     }
 }
@@ -160,34 +186,12 @@ header {
     }
 }
 
-@media screen and (min-width: 400px) {
-    header {
-        div:first-child {
-            width: 50%;
-        }
-
-        nav {
-            button {
-                width: 40%;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 600px) {
-    header {
-        div:first-child {
-            width: 40%;
-        }
-    }
-}
-
 @media screen and (min-width: 768px) {
     header {
         width: -moz-available;
 
         div:first-child {
-            width: 25%;
+            width: 20%;
 
             .logo--sm {
                 display: none;
@@ -217,7 +221,7 @@ header {
 @media screen and (min-width:900px) {
     header {
         div:first-child {
-            width: 30%;
+            width: 19%;
         }
     }
 }
@@ -225,7 +229,15 @@ header {
 @media screen and (min-width: 990px) {
     header {
         div:first-child {
-            width: 20%;
+            width: 15%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        div:first-child {
+            width: 12%;
         }
     }
 }
