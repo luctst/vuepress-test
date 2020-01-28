@@ -1,5 +1,5 @@
 <template>
-    <section class="container newsletter wrapper">
+    <section class="container newsletter">
         <div class="newsletter--background">
             <div class="newsletter--content">
                 <h2>Souscrivez à la moonletter</h2>
@@ -60,7 +60,8 @@ section {
 
 @media screen and (min-width:300px) {
     section {
-        margin-top: 10%;
+        margin-top: 8%;
+        margin-bottom: 14%;
 
         .newsletter--background {
             background-size: auto;
@@ -127,9 +128,9 @@ section {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1100px) {
     section {
-        margin-top: 4%;
+        margin-bottom: 10%;
     }
 }
 </style>
