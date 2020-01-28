@@ -1,11 +1,11 @@
 <template>
-    <section>
+    <section class="floatline">
         <div class="container">
             <h1 v-html="title"></h1>
             <h2>{{description}}</h2>
             <button>En savoir plus</button>
         </div>
-        <div>
+        <div class="floatline--img">
             <img :src="image" alt="icone"/>
         </div>
     </section>
@@ -25,6 +25,7 @@ export default {
 section {
     background-image: linear-gradient(to right, #000dff 0%, rgba(6, 15, 178, 0.99) 100%);
     height: 100vh;
+    overflow: hidden;
 
     div:first-child {
         h1 {
@@ -76,13 +77,71 @@ section {
     }
 }
 
+@media screen and (min-width: 400px) {
+    section {
+        .floatline--img {
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    section {
+        .floatline--img {
+            img {
+                width: 72%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    section {
+        .floatline--img {
+            img {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    section {
+        .floatline--img {
+            img {
+                width: 55%;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     section {
+        align-items: center;
         display: flex;
+        padding-top: 0;
 
-        div:first-child {
-            margin-top: 4em;
-            margin-left: 4em;
+        .floatline--img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    section {
+        justify-content: center;
+
+        .floatline--img {
+            img {
+                width: 75%;
+            }
         }
     }
 }
