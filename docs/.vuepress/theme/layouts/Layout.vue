@@ -3,6 +3,7 @@
         <AssuranceContextuelle/>
         <ProtectionClient />
         <Temoignages />
+        <MshMedia />
     </main>
 </template>
 
@@ -10,12 +11,14 @@
 import AssuranceContextuelle from "../components/AssuranceContextuelle";
 import ProtectionClient from "../components/ProtectionClient";
 import Temoignages from "../components/Temoignages";
+import MshMedia from "../components/MshMedia"
 
 export default {
     components: {
         AssuranceContextuelle,
         ProtectionClient,
-        Temoignages
+        Temoignages,
+        MshMedia
     }
 }
 </script>
