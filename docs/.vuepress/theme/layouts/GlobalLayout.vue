@@ -32,8 +32,8 @@ export default {
           // You can also check whether layout exists first as the default global layout does.
           return this.$frontmatter.layout
         }
-        return 'Layout'
       }
+      
       return 'NotFound'
     }
   },
@@ -50,6 +50,11 @@ export default {
         this.floatLineTitle = "Moonshot-internet<br/> notre nouvelle<br/> punchline de fou";
         this.floatLineDescription = "La 1ère assurtech qui propose des produits d’assurance customisés et contextualisés de manière simple et accessible !";
         this.floatLineImage = "group-5@2x.png";
+        break;
+      case "/career.html":
+        this.floatLineTitle = "Trouvez votre emploi chez Moonshot";
+        this.floatLineDescription = "Rejoignez une équipe jeune, dynamique et débordante d’imagination pour révolutionner le secteur de l’assurance.";
+        this.floatLineImage = "career/group-5@2x.png";
         break;
       default:
         break;
