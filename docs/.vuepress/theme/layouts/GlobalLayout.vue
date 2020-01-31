@@ -56,6 +56,10 @@ export default {
         this.floatLineDescription = "Rejoignez une équipe jeune, dynamique et débordante d’imagination pour révolutionner le secteur de l’assurance.";
         this.floatLineImage = "career/group-5@2x.png";
         break;
+      case "/presse.html":
+        this.floatLineTitle = "Presse";
+        this.floatLineDescription = "Moonshot-Internet is full of exciting challenges. Here you can find everything you need to know about our latest announcements and media coverage, as well as downloading our press kit.";
+        this.floatLineImage = "presse/presse-bg@2x.png";
       default:
         break;
     }
