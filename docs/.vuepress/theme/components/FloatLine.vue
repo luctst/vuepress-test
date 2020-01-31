@@ -24,6 +24,7 @@ export default {
 <style lang="scss" scoped>
 section {
     background-image: linear-gradient(to right, #000dff 0%, rgba(6, 15, 178, 0.99) 100%);
+    display: flex;
     height: 100vh;
     overflow: hidden;
 
@@ -51,9 +52,8 @@ section {
         }
     }
 
-    div {
+    .floatline--img {
         img {
-            width: 100%;
             height: auto;
             object-fit: contain;
         }
@@ -62,29 +62,27 @@ section {
 
 @media screen and (min-width: 300px) {
     section {
-        padding-top: 7em;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-top: 8em;
 
         div:first-child {
             h1 {
-                font-size: 1.9em;
+                font-size: 2em;
             }
 
             h2 {
                 font-size: 1.1em;
-                margin: 8% 0;
+                margin: 2% 0 10% 0;
             }
         }
-    }
-}
 
-@media screen and (min-width: 400px) {
-    section {
         .floatline--img {
             display: flex;
             justify-content: flex-end;
 
             img {
-                width: 80%;
+                width: 100%;
             }
         }
     }
@@ -92,9 +90,13 @@ section {
 
 @media screen and (min-width: 500px) {
     section {
-        .floatline--img {
-            img {
-                width: 72%;
+        div:first-child {
+            h1 {
+                font-size: 2.1em;
+            }
+            
+            h2 {
+                font-size: 1em;
             }
         }
     }
@@ -104,7 +106,7 @@ section {
     section {
         .floatline--img {
             img {
-                width: 60%;
+                width: 80%;
             }
         }
     }
@@ -112,9 +114,9 @@ section {
 
 @media screen and (min-width: 640px) {
     section {
-        .floatline--img {
-            img {
-                width: 55%;
+        div:first-child {
+            h1 {
+                font-size: 2.3em;
             }
         }
     }
@@ -123,13 +125,41 @@ section {
 @media screen and (min-width: 768px) {
     section {
         align-items: center;
-        display: flex;
+        flex-direction: row;
         padding-top: 0;
 
-        .floatline--img {
-            img {
-                width: 100%;
+        div:first-child {
+            h1 {
+                font-size: 2.1em;
             }
+
+            h2 {
+                font-size: 1em;
+            }
+        }
+
+        .floatline--img {
+            width: 75%;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    section {
+        div:first-child {
+            margin-left: 6%;
+
+            h1 {
+                font-size: 2.3em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+        }
+
+        .floatline--img {
+            width: 80%;
         }
     }
 }
@@ -137,11 +167,17 @@ section {
 @media screen and (min-width: 1100px) {
     section {
         justify-content: center;
+        
+        div:first-child {
+            margin-left: 12%;
+
+            h1 {
+                font-size: 2.7em;
+            }
+        }
 
         .floatline--img {
-            img {
-                width: 75%;
-            }
+            width: 75%;
         }
     }
 }
