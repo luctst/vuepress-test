@@ -47,12 +47,12 @@ export default {
   mounted () {
     switch (this.$page.path) {
       case "/":
-        this.floatLineTitle = "Moonshot-internet<br/> notre nouvelle<br/> punchline de fou";
+        this.floatLineTitle = "Moonshot-internet notre nouvelle<br/> punchline de fou";
         this.floatLineDescription = "La 1ère assurtech qui propose des produits d’assurance customisés et contextualisés de manière simple et accessible !";
         this.floatLineImage = "group-5@2x.png";
         break;
       case "/career.html":
-        this.floatLineTitle = "Trouvez votre emploi chez Moonshot";
+        this.floatLineTitle = "Trouvez votre emploi <br/>chez Moonshot";
         this.floatLineDescription = "Rejoignez une équipe jeune, dynamique et débordante d’imagination pour révolutionner le secteur de l’assurance.";
         this.floatLineImage = "career/group-5@2x.png";
         break;
