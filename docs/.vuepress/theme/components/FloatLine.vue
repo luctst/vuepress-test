@@ -1,5 +1,5 @@
 <template>
-    <section class="floatline">
+    <section class="floatline" ref="fl">
         <div class="container">
             <h1 v-html="title"></h1>
             <h2>{{description}}</h2>
@@ -17,6 +17,21 @@ export default {
         title: String,
         description: String,
         image: String
+    },
+    methods: {
+        changeHeader () {
+            if (window.scrollY > this.$refs.fl.clientHeight) {
+                document.querySelectorAll(".nav-desktop > li").forEach(item => item.style = "color: #333;");
+            } else {
+                document.querySelectorAll(".nav-desktop > li").forEach(item => item.style = "color: #fff;");
+            }
+        }
+    },
+    created () {
+        window.addEventListener("scroll", this.changeHeader);
+    },
+    destroyed () {
+        window.removeEventListener("scroll", this.changeHeader);
     }
 }
 </script>
