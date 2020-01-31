@@ -4,13 +4,13 @@
             <img :src="mapDataToProps.imgDesktop">
         </div>
         <div class="accordion--content">
-            <h2>Une équipe de 45 experts du digital et de l’assurance.</h2>
-            <div v-for="(item, index) in mapDataToProps.accordionItem" :key="index" @click="this.$emit("switchItem", index)" class="accordion--item">
+            <h2>{{mapDataToProps.accordionTitle}}</h2>
+            <div v-for="(item, index) in mapDataToProps.accordionItem" :key="index" @click="switchItem(index)" class="accordion--item">
                 <h3>
-                    <img src="page-1@2x.png" :style="mapDataToProps.accordionItemActive === index && 'transform:rotate(180deg);'"/>
+                    <img src="page-1@2x.png" :style="accordionItemActive === index && 'transform:rotate(180deg);'"/>
                     {{item.title}}
                 </h3>
-                <div v-if="mapDataToProps.accordionItemActive === index">
+                <div v-if="accordionItemActive === index">
                     <img :src="item.img"/>
                     <p>{{item.content}}</p>
                     <a>Voir les offres</a>
@@ -24,6 +24,17 @@
 export default {
     props: {
         mapDataToProps: Object
+    },
+    data () {
+        return {
+            accordionItemActive: null
+        }
+    },
+    methods: {
+        switchItem (index) {
+            if (this.accordionItemActive === index) this.accordionItemActive = null;
+            else this.accordionItemActive = index;
+        }
     }
 }
 </script>
