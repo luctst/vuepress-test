@@ -213,6 +213,7 @@ header {
 
             li {
                 color: #fff;
+                padding: 0 8%;
             }
         }
     }
@@ -222,6 +223,14 @@ header {
     header {
         div:first-child {
             width: 19%;
+        }
+
+        nav {
+            .nav-desktop {
+                li {
+                    font-size: 1.1em;
+                }
+            }
         }
     }
 }
