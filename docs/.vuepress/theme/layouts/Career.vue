@@ -2,7 +2,6 @@
   <main>
     <Accordion 
         :mapDataToProps="accordionData"
-        v-on:switchItem="switchItem"
     />
   </main>
 </template>
@@ -17,8 +16,8 @@ export default {
   data () {
       return {
           accordionData: {
+              accordionTitle: "Une équipe de 45 experts du digital et de l’assurance.",
               imgDesktop: "group-3065@2x.png",
-              accordionItemActive: null,
               accordionItem: [
                   {
                         title: "Commercial",
@@ -48,14 +47,6 @@ export default {
               ]
           }
       }
-  },
-  methods: {
-        switchItem (index) {
-            console.clear();
-            console.log(index);
-            if (this.accordionData.accordionItemActive === index) this.accordionData.accordionItemActive = null;
-            else this.accordionData.accordionItemActive = index;
-        }
-    }
+  }
 };
 </script>
