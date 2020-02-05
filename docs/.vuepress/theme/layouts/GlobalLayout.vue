@@ -1,5 +1,5 @@
 <template>
-  <div id="moonshot-theme">
+  <div id="moonshot-theme" v-if="$page.path !== ''">
     <Header/>
     <FloatLine
       :title="floatLineTitle"
