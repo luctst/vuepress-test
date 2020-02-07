@@ -3,15 +3,18 @@
     <Accordion 
         :mapDataToProps="accordionData"
     />
+    <Jobs />
   </main>
 </template>
 
 <script>
 import Accordion from "../components/career/Accordion";
+import Jobs from "../components/presse/Jobs";
 
 export default {
   components: {
-    Accordion
+    Accordion,
+    Jobs
   },
   data () {
       return {
