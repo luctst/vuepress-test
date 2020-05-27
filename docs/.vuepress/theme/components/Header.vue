@@ -2,7 +2,7 @@
     <header ref="header" class="container">
         <div>
             <img src="logo-moonshot@2x.png" class="logo--sm"/>
-            <img src="white@2x.png" class="logo--desktop"/>
+            <!-- <img src="white@2x.png" class="logo--desktop"/> -->
         </div>
         <nav>
             <button @click="showNavigation = !showNavigation" class="btn--burger">
@@ -10,15 +10,24 @@
             </button>
             <div v-if="showNavigation" class="container nav--sm">
                 <ul>
-                    <li>Nos produits</li>
-                    <li>Nos solutions</li>
-                    <li>Qui sommes-nous ?</li>
-                    <li>Contact</li>
+                  <li>Nos solutions</li>
+                  <li>Nos produits</li>
+                  <li>Notre technologie</li>
+                  <li>Qui sommes-nous ?</li>
+                  <li>Contact</li>
                 </ul>
             </div>
             <ul class="nav-desktop">
-                <li>Nos produits</li>
                 <li>Nos solutions</li>
+                <li @click="menuDropdown('produit')">
+                    Nos produits
+                    <div v-if="showDropdown" class="dropdown">
+                        <ul>
+                            <li v-for="(product, i) in productsGamme">{{product}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Notre technologie</li>
                 <li>Qui sommes-nous ?</li>
                 <li>Contact</li>
             </ul>
@@ -30,7 +39,34 @@
 export default {
     data () {
         return {
-            showNavigation: false
+            showNavigation: false,
+            showDropdown: false,
+            productsGamme: [
+                "Voyage", 
+                "Paiement", 
+                "Livraison",
+                "Appareils électroniques",
+                "Divertissement",
+                "Mobilité"
+            ],
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                if (this.$refs.header.hasAttribute("style")) return false
+                this.$refs.header.style = "background-color: #fff;box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px !important;"
+            } else {
+                this.$refs.header.removeAttribute("style")
+            }
+        }.bind(this))
+    },
+    methods: {
+        menuDropdown (e) {
+            if (e === "produit") {
+                if (!this.showDropdown) return this.showDropdown = true
+                this.showDropdown = false;
+            }
         }
     }
 }
@@ -40,11 +76,12 @@ export default {
 header {
     align-items: center;
     display: flex;
-    height: 10vh;
+    height: 11vh;
     justify-content: space-between;
     position: fixed;
     margin: 0 auto;
     padding: 0 15px;
+    transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;
     width: inherit;
     z-index: 1;
 
@@ -99,15 +136,35 @@ header {
             margin: 0;
 
             li {
-                padding: 0 .5em;
+                font-weight: 500;
+                padding: 0;
+                position: relative;
+
+                .dropdown {
+                    background-color: #fff;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 6px 0 rgba(192, 192, 192, 0.5);
+                    margin-top: 8%;
+                    padding: 12px 18px;
+                    position: absolute;
+                    width: max-content;
+
+                    ul {
+                        li {
+                            :hover {
+                                color: #1717ff;
+                            }
+                        }
+                    }
+                }
             }
 
             li:last-child {
                 border-radius: 100px;
                 box-shadow: 0 4px 10px 0 rgba(40, 40, 40, 0.16);
-                background-image: linear-gradient(to bottom, #1cd9ec, #09c0d3);
+                background-image: linear-gradient(to bottom, #4040ff, #1717ff);
                 color: #fff;
-                padding: 6px 25px;
+                padding: 12px 45px;
             }
         }
     }
@@ -168,10 +225,6 @@ header {
             .logo--sm {
                 display: block;
             }
-
-            .logo--desktop {
-                display: none;
-            }
         }
 
         nav {
@@ -194,12 +247,8 @@ header {
             width: 20%;
 
             .logo--sm {
-                display: none;
-            }
-
-            .logo--desktop {
                 display: block;
-            }            
+            }
         }
 
         nav {
@@ -210,9 +259,11 @@ header {
 
         .nav-desktop {
             display: flex;
+            width: 50vw;
+            justify-content: flex-end;
 
             li {
-                color: #fff;
+                color: #0e2244;
                 padding: 0 8%;
             }
         }
@@ -247,6 +298,19 @@ header {
     header {
         div:first-child {
             width: 12%;
+        }
+
+        nav {
+            .nav-desktop {
+                li {
+                    font-size: 16px;
+                    margin-right: 3.5%;
+                }
+
+                li:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
 }
