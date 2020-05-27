@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="691px" viewBox="0 0 1440 691" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <linearGradient x1="2.81285461%" y1="33.034475%" x2="109.245352%" y2="63.7693132%" id="linearGradient-1">
+            <stop stop-color="#EBF1FC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-1.2%" y="-2.4%" width="102.4%" height="104.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="04-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PG_Produit_[NAV]" fill="url(#linearGradient-1)">
+            <rect id="Rectangle" filter="url(#filter-2)" transform="translate(940.500000, -127.000000) rotate(-15.000000) translate(-940.500000, 127.000000) " x="-293" y="-741" width="2467" height="1228" rx="536"></rect>
+        </g>
+    </g>
+</svg>
