@@ -1,5 +1,5 @@
 <template>
-    <section class="floatline" ref="fl">
+    <section class="floatline" style="background-image:url('bck_header.svg')">
         <div class="container">
             <h1 v-html="title"></h1>
             <h2>{{description}}</h2>
@@ -17,47 +17,34 @@ export default {
         title: String,
         description: String,
         image: String
-    },
-    methods: {
-        changeHeader () {
-            if (window.scrollY > this.$refs.fl.clientHeight) {
-                document.querySelectorAll(".nav-desktop > li").forEach(item => item.style = "color: #333;");
-            } else {
-                document.querySelectorAll(".nav-desktop > li").forEach(item => item.style = "color: #fff;");
-            }
-        }
-    },
-    created () {
-        window.addEventListener("scroll", this.changeHeader);
-    },
-    destroyed () {
-        window.removeEventListener("scroll", this.changeHeader);
     }
 }
 </script>
 
 <style lang="scss" scoped>
 section {
-    background-image: linear-gradient(to right, #000dff 0%, rgba(6, 15, 178, 0.99) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     height: 100vh;
     overflow: hidden;
 
     div:first-child {
         h1 {
-            color: #fff;
+            color: #0e2244;
             line-height: 1.5;
             margin: 0;
         }
 
         h2 {
-            color: #fff;
+            color: #0e2244;
             font-weight: normal;
             line-height: 1.5;
         }
 
         button {
-            background-image: linear-gradient(to bottom, #1cd9ec, #09c0d3);
+            background-image: linear-gradient(to bottom, #4040ff, #1717ff);
             border-radius: 100px;
             box-shadow: 0 4px 10px 0 rgba(40, 40, 40, 0.16);
             background-color: #d8d8d8;
@@ -77,7 +64,6 @@ section {
 
 @media screen and (min-width: 300px) {
     section {
-        justify-content: space-between;
         flex-direction: column;
         padding-top: 8em;
 
@@ -88,13 +74,14 @@ section {
 
             h2 {
                 font-size: 1.1em;
-                margin: 2% 0 10% 0;
+                margin: 2% 0 8% 0;
             }
         }
 
         .floatline--img {
             display: flex;
             justify-content: flex-end;
+            margin-top: 8%;
 
             img {
                 width: 100%;
@@ -192,7 +179,9 @@ section {
         }
 
         .floatline--img {
-            width: 75%;
+            img {
+                width: 100%;
+            }
         }
     }
 }
