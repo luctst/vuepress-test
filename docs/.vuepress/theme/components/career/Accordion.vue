@@ -1,10 +1,7 @@
 <template>
     <section class="accordion container">
-        <div class="accordion--img--desktop">
-            <img :src="mapDataToProps.imgDesktop">
-        </div>
         <div class="accordion--content">
-            <h2>{{mapDataToProps.accordionTitle}}</h2>
+            <h2 v-if="mapDataToProps.accordionTitle">{{mapDataToProps.accordionTitle}}</h2>
             <div v-for="(item, index) in mapDataToProps.accordionItem" :key="index" @click="switchItem(index)" class="accordion--item">
                 <h3>
                     <img src="page-1@2x.png" :style="accordionItemActive === index && 'transform:rotate(180deg);'"/>
@@ -16,6 +13,9 @@
                     <a>Voir les offres</a>
                 </div>
             </div>
+        </div>
+        <div class="accordion--img--desktop" v-if="mapDataToProps.imgDesktop">
+            <img :src="mapDataToProps.imgDesktop">
         </div>
     </section>
 </template>
@@ -42,6 +42,8 @@ export default {
 <style lang="scss" scoped>
 .accordion {
     &--content {
+        height: max-content;
+
         h2 {
             color: #38393f;
             line-height: 1.25;
@@ -55,7 +57,9 @@ export default {
             h3 {
                 align-items: center;
                 display: flex;
+                color: #0e2244;
                 font-weight: 500;
+                padding-bottom: 3%;
 
                 img {
                     height: auto;
@@ -76,16 +80,21 @@ export default {
                 }
 
                 p {
-                    color: #38393f;
+                    color: #0e2244;
                     line-height: 1.25;
                 }
 
                 a {
-                    color: #33c6da;
+                    color: #1717ff;
                     display: inline-block;
                 }
             }
         }
+    }
+
+    &--img--desktop {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -113,10 +122,6 @@ export default {
                 }
 
                 div {
-                    img {
-                        margin: 8% 0;
-                    }
-
                     p {
                         margin: 8% 0;
                     }
@@ -190,7 +195,6 @@ export default {
 
 @media screen and (min-width: 768px) {
     .accordion {
-        align-items: center;
         display: flex;
         justify-content: space-between;
         padding: 6% 15px;
@@ -215,8 +219,6 @@ export default {
             }
 
             .accordion--item {
-                margin-bottom: 9%;
-
                 h3 {
                     font-size: 1.4em;
                     margin-bottom: 1%;
@@ -275,8 +277,23 @@ export default {
     .accordion {
         padding: 6% 0;
 
+        &--content {
+            flex: 0 0 40%;
+
+            &--item {
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
         &--img--desktop {
-            flex: 0 0 45%;
+            margin-right: 0;
+            margin-left: 8%;
+
+            img {
+                width: 80%;
+            }
         }
     }
 }
