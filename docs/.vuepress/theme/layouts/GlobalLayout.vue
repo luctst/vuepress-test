@@ -60,6 +60,11 @@ export default {
         this.floatLineTitle = "Presse";
         this.floatLineDescription = "Moonshot-Internet is full of exciting challenges. Here you can find everything you need to know about our latest announcements and media coverage, as well as downloading our press kit.";
         this.floatLineImage = "presse/presse-bg@2x.png";
+        break;
+      case "/products.html":
+        this.floatLineTitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+        this.floatLineDescription = "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem";
+        this.floatLineImage = "product/illus_header@2x.png";
       default:
         break;
     }
