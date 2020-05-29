@@ -82,6 +82,7 @@ header {
     margin: 0 auto;
     padding: 0 15px;
     transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;
+    transition: background-color 0.3s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;
     width: inherit;
     z-index: 1;
 
