@@ -4,10 +4,5 @@
 
 <script>
 export default {
-    data() {
-        return {
-            token: TOKEN
-        }
-    }
 }
 </script>
