@@ -65,6 +65,10 @@ export default {
         this.floatLineTitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
         this.floatLineDescription = "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem";
         this.floatLineImage = "product/illus_header@2x.png";
+      case "/contact.html":
+        this.floatLineTitle = "Laissez-nous un message !";
+        this.floatLineDescription = "Nos équipes commerciales et support sont à votre disposition pour répondre à vos questions. N’hésitez pas à nous contacter et nous reviendrons vers vous dès que possible.";
+        this.floatLineImage = "contact/pg-produit-travel-mob@2x.png";
       default:
         break;
     }
