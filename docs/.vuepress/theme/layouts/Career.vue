@@ -269,6 +269,18 @@ main {
         }
       }
     }
+
+    .spontane {
+      &--title {
+        h3 {
+          margin-bottom: 2%;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }
 </style>
