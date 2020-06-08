@@ -1,6 +1,8 @@
 <template>
   <main>
-    <AssuranceContextuelle />
+    <section class="container trust">
+      <h2></h2>
+    </section>
     <Accordion :mapDataToProps="accordionData" />
     <Temoignages />
     <MshMedia />
@@ -8,7 +10,6 @@
 </template>
 
 <script>
-import AssuranceContextuelle from "../components/AssuranceContextuelle";
 import Accordion from "../components/career/Accordion";
 import Temoignages from "../components/Temoignages";
 import MshMedia from "../components/MshMedia";
