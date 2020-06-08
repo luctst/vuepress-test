@@ -74,6 +74,7 @@ footer {
     }
 
     .footer--content {
+        font-family: "gotham-rounded";
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -124,6 +125,7 @@ footer {
 
         p {
             color: #38393f;
+            font-family: "gotham-rounded";
             line-height: 1.5;
             margin: 0;
         }
@@ -151,6 +153,8 @@ footer {
         }
 
         .footer--content {
+            font-size: 12px;
+
             div {
                 margin: 8% 0;
             }
@@ -165,6 +169,10 @@ footer {
             div {
                 margin-top: 5%; 
                 width: 30%;
+            }
+
+            p {
+                font-size: 12px;
             }
         }
     }
@@ -264,10 +272,6 @@ footer {
         }
 
         .footer--legales {
-            p {
-                font-size: 16px;
-            }
-
             div {
                 width: 10%;
             }
