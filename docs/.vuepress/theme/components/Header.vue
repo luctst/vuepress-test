@@ -137,7 +137,7 @@ header {
             margin: 0;
 
             li {
-                font-weight: 500;
+                font-family: "gotham-medium";
                 padding: 0;
                 position: relative;
 
@@ -165,7 +165,6 @@ header {
                 box-shadow: 0 4px 10px 0 rgba(40, 40, 40, 0.16);
                 background-image: linear-gradient(to bottom, #4040ff, #1717ff);
                 color: #fff;
-                padding: 12px 45px;
             }
         }
     }
@@ -260,12 +259,17 @@ header {
 
         .nav-desktop {
             display: flex;
-            width: 50vw;
-            justify-content: flex-end;
+            width: 64vw;
+            justify-content: space-between;
 
             li {
                 color: #0e2244;
+                font-size: .9em;
                 padding: 0 8%;
+            }
+
+            li:last-child {
+                padding: 9px 30px!important;
             }
         }
     }
@@ -279,8 +283,10 @@ header {
 
         nav {
             .nav-desktop {
+                width: 61vw;
+
                 li {
-                    font-size: 1.1em;
+                    font-size: 13px;
                 }
             }
         }
@@ -303,13 +309,15 @@ header {
 
         nav {
             .nav-desktop {
+                justify-content: flex-end;
+
                 li {
-                    font-size: 16px;
                     margin-right: 3.5%;
                 }
 
                 li:last-child {
                     margin-right: 0;
+                    padding: 12px 45px;
                 }
             }
         }

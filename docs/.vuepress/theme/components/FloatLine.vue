@@ -33,12 +33,14 @@ section {
     div:first-child {
         h1 {
             color: #0e2244;
+            font-family: "gotham-bold";
             line-height: 1.5;
             margin: 0;
         }
 
         h2 {
             color: #0e2244;
+            font-family: "gotham-rounded";
             font-weight: normal;
             line-height: 1.5;
         }
@@ -50,6 +52,7 @@ section {
             background-color: #d8d8d8;
             border: none;
             color: #fff;
+            font-family: "gotham-medium";
             padding: 12px 24px;
         }
     }

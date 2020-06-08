@@ -46,6 +46,7 @@ export default {
 
         h2 {
             color: #38393f;
+            font-family: "gotham-bold";
             line-height: 1.25;
             margin: 0;
             text-align: center;
@@ -58,7 +59,7 @@ export default {
                 align-items: center;
                 display: flex;
                 color: #0e2244;
-                font-weight: 500;
+                font-family: "gotham-medium";
                 padding-bottom: 3%;
 
                 img {

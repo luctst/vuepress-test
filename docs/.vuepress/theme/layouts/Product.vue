@@ -111,6 +111,7 @@ main {
 
             p {
                 color: #c3cee2;
+                font-family: "gotham-rounded";
                 margin: 0;
                 text-align: center;
             }
