@@ -264,7 +264,7 @@ header {
 
             li {
                 color: #0e2244;
-                font-size: .9em;
+                font-size: .7em;
                 padding: 0 8%;
             }
 
