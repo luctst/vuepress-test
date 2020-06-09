@@ -72,7 +72,8 @@ export default {
       default:
         break;
     }
-    document.querySelector("body").style = "padding:0;margin:0;overflow-x:hidden;";
+    document.querySelector("body").style = "padding:0;margin:0;";
+    document.querySelector("#moonshot-theme").style = "overflow-x:hidden;"
   }
 }
 </script>
