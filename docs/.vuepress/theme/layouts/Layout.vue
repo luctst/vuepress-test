@@ -11,7 +11,48 @@
         <img src="/mister-f-ly@2x.png" alt="logo finance"/>
       </div>
     </section>
-    <section class="container innovation"></section>
+    <section class="container innovation">
+      <h2>Des innovations fortes à chaque étapes de la chaine de valeur</h2>
+      <section>
+        <div>
+          <img src="/couverture@2x.png" alt="Produit innovant"/>
+          <h3>Couverture produit innovante</h3>
+          <ul>
+            <li>Conditions simples et transparentes.</li>
+            <li>Couverture  innovante liée aux nouveaux usages.</li>
+            <li>Règles de gestion personnalisables.</li>
+          </ul>
+        </div>
+        <div>
+          <img src="/souscription@2x.png" alt="souscription"/>
+          <h3>Souscription fluide et transparente</h3>
+          <ul>
+            <li>Souscription en 1 clic.</li>
+            <li>Tarification dynamique selon profil.</li>
+            <li>Capacité d’A/B testing.</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div>
+          <img src="/implementation@2x.png" alt="implementation"/>
+          <h3>Facilité d’implémentation</h3>
+          <ul>
+            <li>Intégration Plug&Play à chaque étape de la vie du contrat via une architecture APIrest.</li>
+            <li>Time-to-market rapide grâce à nos parcours client en marque-blanches.</li>
+          </ul>
+        </div>
+        <div>
+          <img src="/gestioninnovante@2x.png" alt="gestion innovante"/>
+          <h3>Gestion innovantes des indemnisations </h3>
+          <ul>
+            <li>Indemnisation immédiate et sans justificatifs requis.</li>
+            <li>Détection du sinistre automatisée, en temps réel.</li>
+            <li>Détection du sinistre via computer vision, en temps réel.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
     <Accordion :mapDataToProps="accordionData" />
     <MshMedia />
   </main>
@@ -86,6 +127,47 @@ main {
       }
     }
   }
+
+  .innovation {
+    h2 {
+      color: #0e2244;
+      font-family: "gotham-bold";
+      margin: 0;
+    }
+
+    section {
+      div {
+        h3 {
+          color: #0e2244;
+          font-family: "gotham-medium";
+          margin: 0;
+        }
+
+        img {
+          height: auto;
+          object-fit: contain;
+        }
+
+        ul {
+          list-style-type: none;
+
+          li {
+            color: #38393f;
+            font-family: "gotham-rounded";
+          }
+
+          li::before {
+            content: "\2022";
+            color: #1717ff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 300px) {
@@ -112,6 +194,40 @@ main {
         }
       }
     }
+
+    .innovation {
+      margin-top: 16%;
+
+      h2 {
+        margin-bottom: 22%;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          margin-bottom: 16%;
+
+          h3 {
+            font-size: 23px;
+            margin: 4% 0 8% 0;
+          }
+
+          img {
+            width: 50%;
+          }
+
+          ul {
+            padding-left: 4%;
+
+            li {
+              margin-bottom: 6%;
+            }
+          }
+        }
+      }
+    }
   }
 } 
 
@@ -125,6 +241,30 @@ main {
       &--logo {
         img {
           width: 20%;
+        }
+      }
+    }
+
+    .innovation {
+      h2 {
+        margin-bottom: 16%;
+      }
+
+      section {
+        div {
+          img {
+            width: 40%;
+          }
+
+          h3 {
+            margin-top: 6%;
+          }
+
+          ul {
+            li {
+              margin-bottom: 4%;
+            }
+          }
         }
       }
     }
@@ -146,6 +286,32 @@ main {
         }
       }
     }
+
+    .innovation {
+      margin-top: 12%;
+
+      h2 {
+        font-size: 26px;
+        margin-bottom: 12%;
+      }
+
+      section {
+        div {
+          margin-bottom: 8%;
+
+          h3 {
+            margin-top: 4%;
+            margin-bottom: 6%;
+          }
+
+          ul {
+            li {
+              margin-bottom: 3%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -157,6 +323,36 @@ main {
       &--logo {
         img {
           width: 14%;
+        }
+      }
+    }
+
+    .innovation {
+      margin-top: 8%;
+
+      h2 {
+        font-size: 1.3em;
+        margin-bottom: 8%;
+        text-align: center;
+      }
+
+      section {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        div {
+          flex: 0 0 50%;
+
+          h3 {
+            font-size: 1em;
+            margin-bottom: 4%;
+          }
+
+          ul {
+            li {
+              font-size: 13px;
+            }
+          }
         }
       }
     }
@@ -180,6 +376,13 @@ main {
         }
       }
     }
+
+    .innovation {
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 6%;
+      }
+    }
   }
 }
 
@@ -194,6 +397,32 @@ main {
       &--logo {
         img {
           width: 12%;
+        }
+      }
+    }
+
+    .innovation {
+      h2 {
+        text-align: left;
+        font-size: 2em;
+      }
+
+      section {
+        div {
+          img {
+            width: 25%;
+          }
+
+          h3 {
+            font-size: 1.3em;
+          }
+
+          ul {
+            li {
+              font-size: 1em;
+              margin-bottom: 2%;
+            }
+          }
         }
       }
     }
