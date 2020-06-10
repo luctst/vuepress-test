@@ -1,8 +1,8 @@
 <template>
     <section class="moonshot--media container">
         <div class="moonshot--media--title">
-            <h3>Moonshot-internet dans les medias</h3>
-            <p>Retrouvez les derniers articles parues dans la presse et ceux de notre blog rédigés par nos expert.</p>
+            <h3>Moonshot-Internet est plein de défis passionnants.</h3>
+            <p>Vous trouverez ici tout ce que vous devez savoir sur nos dernières annonces et notre présence dans la presse.</p>
         </div>
         <div class="moonshot--media--articles">
             <article v-for="(item, index) in articles" :key="index">
@@ -58,12 +58,14 @@ export default {
 
         h3 {
             color: #38393f;
+            font-family: "gotham-bold";
             line-height: 1.25;
             margin: 0;
         }
 
         p {
             color: #38393f;
+            font-family: "gotham-rounded";
             line-height: 1.5;
             margin: 0;
         }
@@ -183,11 +185,12 @@ export default {
     .moonshot--media {
         &--title {
             h3 {
-                font-size: 3em;
+                font-size: 2em;
             }
 
             p {
-                margin: 3% 0;
+                font-size: 14px;
+                margin: 1% 0 3% 0;
             }
         }
 
