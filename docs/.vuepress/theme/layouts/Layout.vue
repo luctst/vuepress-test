@@ -1,30 +1,30 @@
 <template>
   <main>
     <section class="container trust">
-      <h2>CES GRANDES ENTREPRISES NOUS FONT CONFIANCE </h2>
+      <h2>CES GRANDES ENTREPRISES NOUS FONT CONFIANCE</h2>
       <div class="trust--logo">
-        <img src="/societegenerale@2x.png" alt="Logo societe generale"/>
-        <img src="/bitmap@2x.png" alt="logo Rakuten"/>
-        <img src="/tridea@2x.png" alt="logo tridea"/>
-        <img src="/fran-fianance@2x.png" alt="logo misterfly"/>
-        <img src="/leboncoin@2x.png" alt="logo leboncoin"/>
-        <img src="/mister-f-ly@2x.png" alt="logo finance"/>
+        <img src="/societegenerale@2x.png" alt="Logo societe generale" />
+        <img src="/bitmap@2x.png" alt="logo Rakuten" />
+        <img src="/tridea@2x.png" alt="logo tridea" />
+        <img src="/fran-fianance@2x.png" alt="logo misterfly" />
+        <img src="/leboncoin@2x.png" alt="logo leboncoin" />
+        <img src="/mister-f-ly@2x.png" alt="logo finance" />
       </div>
     </section>
     <section class="container innovation">
       <h2>Des innovations fortes à chaque étapes de la chaine de valeur</h2>
       <section>
         <div>
-          <img src="/couverture@2x.png" alt="Produit innovant"/>
+          <img src="/couverture@2x.png" alt="Produit innovant" />
           <h3>Couverture produit innovante</h3>
           <ul>
             <li>Conditions simples et transparentes.</li>
-            <li>Couverture  innovante liée aux nouveaux usages.</li>
+            <li>Couverture innovante liée aux nouveaux usages.</li>
             <li>Règles de gestion personnalisables.</li>
           </ul>
         </div>
         <div>
-          <img src="/souscription@2x.png" alt="souscription"/>
+          <img src="/souscription@2x.png" alt="souscription" />
           <h3>Souscription fluide et transparente</h3>
           <ul>
             <li>Souscription en 1 clic.</li>
@@ -35,7 +35,7 @@
       </section>
       <section>
         <div>
-          <img src="/implementation@2x.png" alt="implementation"/>
+          <img src="/implementation@2x.png" alt="implementation" />
           <h3>Facilité d’implémentation</h3>
           <ul>
             <li>Intégration Plug&Play à chaque étape de la vie du contrat via une architecture APIrest.</li>
@@ -43,8 +43,8 @@
           </ul>
         </div>
         <div>
-          <img src="/gestioninnovante@2x.png" alt="gestion innovante"/>
-          <h3>Gestion innovantes des indemnisations </h3>
+          <img src="/gestioninnovante@2x.png" alt="gestion innovante" />
+          <h3>Gestion innovantes des indemnisations</h3>
           <ul>
             <li>Indemnisation immédiate et sans justificatifs requis.</li>
             <li>Détection du sinistre automatisée, en temps réel.</li>
@@ -53,7 +53,35 @@
         </div>
       </section>
     </section>
-    <Accordion :mapDataToProps="accordionData" />
+    <section class="container accordion--title">
+      <h2>Des solutions faites pour votre industrie</h2>
+      <p>Moonshot-Internet offre un accompagnement sur-mesure avec une vraie compréhension des enjeux de votre secteur d'activité.</p>
+      <Accordion :mapDataToProps="accordionData" />
+    </section>
+    <section class="container plateforme">
+      <div class="plateforme--logo">
+        <img src="/img-api@2x.png" alt="image api"/>
+      </div>
+      <div class="plateforme--content">
+        <h2>La platforme d'Insurance-As-A-Service de référence</h2>
+        <p>Une plateforme digitale qui propose des solutions d’assurance intégrées et centrées sur le client.</p>
+        <p>
+          <span>L'Integration personnalisé par API</span> permet d'intégrer nativement nos APIrest au sein de vos services pour une expérience utilisateur plus fluide, transparente et personnalisée.
+        </p>
+        <p>
+          <span>L'intégration en marque blanche</span> offre un parcours client avec le logo et les couleurs de votre marque, permettant de réduire le time-to-market et la complexité d'intégration.
+        </p>
+        <a>En savoir plus</a>
+      </div>
+    </section>
+    <section class="container avis">
+      <VueSlickCarousel :arrows="false" :dots="true" :infinite="false">
+        <div v-for="(d, i) in sliderData" :key="i">
+          <h2>{{d.title}}</h2>
+          <p>{{d.avis}}</p>
+        </div>
+      </VueSlickCarousel>
+    </section>
     <MshMedia />
   </main>
 </template>
@@ -61,16 +89,31 @@
 <script>
 import Accordion from "../components/career/Accordion";
 import MshMedia from "../components/MshMedia";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
   components: {
     Accordion,
-    MshMedia
+    MshMedia,
+    VueSlickCarousel
   },
   data() {
     return {
+      slideNumber: 2,
+      sliderData: [
+        {
+          title: "Développez votre entreprise avec Moonshot-Internet !",
+          avis: "«  La gestion des contrats d’assurances est un enjeu clé pour nous, ce partenariat avec Moonshot-Internet nous aider à répondre à une demande importante de la part de nos clients de simplification, de flexibilité, et surtout de prises en charge adaptées à leurs besoins. »",
+          logo: ""
+        },
+        {
+          title: "test",
+          avis: "Trop cool"
+        }
+      ],
       accordionData: {
-        accordionTitle: "Nous vous protégeons vous et vos clients",
         imgDesktop: "group-3065@2x.png",
         accordionItem: [
           {
@@ -106,7 +149,7 @@ export default {
         ]
       }
     };
-  }
+  },
 };
 </script>
 
@@ -163,6 +206,95 @@ main {
             display: inline-block;
             width: 1em;
             margin-left: -1em;
+          }
+        }
+      }
+    }
+  }
+
+  .accordion--title {
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      color: #0e2244;
+      font-family: "gotham-bold";
+    }
+
+    p {
+      color: #38393f;
+      font-family: "gotham-rounded";
+    }
+  }
+
+  .plateforme {
+    display: flex;
+
+    &--logo {
+      img {
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+
+    &--content {
+      h2,
+      p {
+        margin: 0;
+      }
+
+      h2 {
+        color: #0e2244;
+        font-family: "gotham-bold";
+      }
+
+      p {
+        color: #38393f;
+        font-family: "gotham-rounded";
+
+        span {
+          font-family: "gotham-medium";
+        }
+      }
+
+      a {
+        color: #1717ff;
+        font-family: "gotham-medium";
+      }
+    }
+  }
+
+  .avis {
+    .slick-slider {
+      .slick-list {
+        .slick-track {
+          .slick-slide {
+            div {
+              div {
+                h2 {
+                  color: #0e2244;
+                  font-family: "gotham-bold";
+                }
+
+                p {
+                  color: #282828;
+                  font-family: "gotham-rounded";
+
+                  ::before {
+                    content: """";
+                    display: block;
+                  }
+
+                  ::after {
+                    content: """";
+                    display: block;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -228,8 +360,50 @@ main {
         }
       }
     }
+
+    .accordion--title {
+      h2 {
+        font-size: 1.6em;
+        margin-bottom: 6%;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+
+    .plateforme {
+      flex-direction: column;
+      margin-top: 16%;
+
+      &--logo {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 85%;
+        }
+      }
+
+      &--content {
+        h2 {
+          font-size: 1.6em;
+          margin: 8% 0;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 24px;
+          margin-bottom: 8%;
+        }
+
+        a {
+          font-size: 15px;
+        }
+      }
+    }
   }
-} 
+}
 
 @media screen and (min-width: 460px) {
   main {
@@ -265,6 +439,31 @@ main {
               margin-bottom: 4%;
             }
           }
+        }
+      }
+    }
+
+    .accordion--title {
+      h2 {
+        font-size: 1.8em;
+      }
+    }
+
+    .plateforme {
+      &--logo {
+        img {
+          width: 75%;
+        }
+      }
+
+      &--content {
+        h2 {
+          font-size: 1.7em;
+          margin: 7% 0;
+        }
+
+        p {
+          margin-bottom: 5%;
         }
       }
     }
@@ -312,6 +511,31 @@ main {
         }
       }
     }
+
+    .accordion--title {
+      h2 {
+        margin-bottom: 5%;
+      }
+    }
+
+    .plateforme {
+      &--logo {
+        img {
+          width: 65%;
+        }
+      }
+
+      &--content {
+        h2 {
+          font-size: 1.9em;
+          margin: 6% 0;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
 
@@ -353,6 +577,44 @@ main {
               font-size: 13px;
             }
           }
+        }
+      }
+    }
+
+    .accordion--title {
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 2%;
+      }
+
+      p {
+        font-size: .9em;
+      }
+    }
+
+    .plateforme {
+      flex-direction: row;
+      margin-top: 8%;
+
+      &--logo {
+        flex: 0 0 50%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &--content {
+        flex: 0 0 50%;
+        margin-left: 4%;
+
+        h2 {
+          font-size: 1.5em;
+          margin-top: 0;
+        }
+
+        p {
+          margin-bottom: 6%;
         }
       }
     }
@@ -425,6 +687,42 @@ main {
           }
         }
       }
+    }
+
+    .accordion--title {
+      h2 {
+        font-size: 2em;
+        margin-bottom: 1%;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+
+    .plateforme {
+      margin-top: 4%;
+
+      &--logo {
+        img {
+          width: 75%;
+        }
+      }
+
+      &--content {
+        h2 {
+          font-size: 2em;
+          margin-bottom: 4%;
+        }
+
+        p {
+          margin-bottom: 4%;
+        }
+      }
+    }
+
+    .avis {
+      margin-top: 6%;
     }
   }
 }
