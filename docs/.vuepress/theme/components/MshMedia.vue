@@ -183,6 +183,8 @@ export default {
 
 @media screen and (min-width: 1100px) {
     .moonshot--media {
+        margin-top: 6%;
+
         &--title {
             h3 {
                 font-size: 2em;
