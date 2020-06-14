@@ -60,7 +60,7 @@
     </section>
     <section class="container plateforme">
       <div class="plateforme--logo">
-        <img src="/img-api@2x.png" alt="image api"/>
+        <img src="/img-api@2x.png" alt="image api" />
       </div>
       <div class="plateforme--content">
         <h2>La platforme d'Insurance-As-A-Service de référence</h2>
@@ -79,6 +79,7 @@
         <div v-for="(d, i) in sliderData" :key="i">
           <h2>{{d.title}}</h2>
           <p>{{d.avis}}</p>
+          <!-- <img :src='{{d.l}}' alt="logo company"/> -->
         </div>
       </VueSlickCarousel>
     </section>
@@ -89,9 +90,9 @@
 <script>
 import Accordion from "../components/career/Accordion";
 import MshMedia from "../components/MshMedia";
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   components: {
@@ -105,12 +106,14 @@ export default {
       sliderData: [
         {
           title: "Développez votre entreprise avec Moonshot-Internet !",
-          avis: "«  La gestion des contrats d’assurances est un enjeu clé pour nous, ce partenariat avec Moonshot-Internet nous aider à répondre à une demande importante de la part de nos clients de simplification, de flexibilité, et surtout de prises en charge adaptées à leurs besoins. »",
-          logo: ""
+          avis:
+            "«  La gestion des contrats d’assurances est un enjeu clé pour nous, ce partenariat avec Moonshot-Internet nous aider à répondre à une demande importante de la part de nos clients de simplification, de flexibilité, et surtout de prises en charge adaptées à leurs besoins. »",
+          l: "/bitmap@2x.png"
         },
         {
           title: "test",
-          avis: "Trop cool"
+          avis: "Trop cool",
+          l: ""
         }
       ],
       accordionData: {
@@ -149,7 +152,7 @@ export default {
         ]
       }
     };
-  },
+  }
 };
 </script>
 
@@ -277,21 +280,24 @@ main {
                 h2 {
                   color: #0e2244;
                   font-family: "gotham-bold";
+                  margin: 0;
                 }
 
                 p {
                   color: #282828;
                   font-family: "gotham-rounded";
+                  margin: 0;
+                }
 
-                  ::before {
-                    content: """";
-                    display: block;
-                  }
+                p::before,
+                p::after {
+                  color: #ebf1fc;
+                  content: "''";
+                  display: block;
+                }
 
-                  ::after {
-                    content: """";
-                    display: block;
-                  }
+                img {
+                  margin: 0 auto;
                 }
               }
             }
@@ -402,6 +408,53 @@ main {
         }
       }
     }
+
+    .avis {
+      margin-top: 16%;
+
+      .slick-slider {
+        .slick-list {
+          .slick-track {
+            .slick-slide {
+              div {
+                div {
+                  h2 {
+                    font-size: 1.8em;
+                    line-height: 40px;
+                  }
+
+                  p {
+                    font-size: 15px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-top: 12%;
+                  }
+
+                  p::before,
+                  p::after {
+                    font-size: 4em;
+                  }
+
+                  p::before {
+                    text-align: left;
+                    margin-bottom: 3%;
+                  }
+
+                  p::after {
+                    text-align: right;
+                    margin-top: 3%;
+                  }
+
+                  img {
+                    width: 30%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -467,6 +520,8 @@ main {
         }
       }
     }
+
+    /* .avis {} */
   }
 }
 
@@ -588,7 +643,7 @@ main {
       }
 
       p {
-        font-size: .9em;
+        font-size: 0.9em;
       }
     }
 
@@ -723,6 +778,36 @@ main {
 
     .avis {
       margin-top: 6%;
+
+      .slick-slider {
+        .slick-list {
+          .slick-track {
+            .slick-slide {
+              div {
+                div {
+                  h2 {
+                    font-size: 2em;
+                    text-align: center;
+                  }
+
+                  p {
+                    align-items: center;
+                    display: flex;
+                    font-size: 16px;
+                    margin-top: 3%;
+                  }
+
+                  p::before,
+                  p::after {
+                    font-size: 5em;
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
