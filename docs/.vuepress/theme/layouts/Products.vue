@@ -29,64 +29,153 @@ export default {
             ],
             accordionData: {
                 Voyage: {
-                    imgDesktop: "product/illus_Travel_AnnulVol.svg",
                     accordionItem: [
                         {
                             title: "Bagage (dommage/perte/vol)",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: "product/travel-illustration@2x.png"
                         },
                         {
                             title: "Annulation de vol",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: "product/illus-flight-cancel@2x.png"
                         },
                         {
                             title: "Retard de vol à l'arrivée",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: "product/retard-arrivee.png"
                         },
                         {
                             title: "Retard de vol au départ",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: "product/retard-depart.png"
                         },
                         {
                             title: "Correspondance manquée",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: ""
                         },
                         {
                             title: "Distributeur d'énergie",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: ""
                         },
                         {
                             title: "Mauvaise méteo",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: "product/bad-weather.png"
                         },
                         {
                             title: "Assistance",
                             content: "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem",
-                            img: "product/AnnulationVol.png"
+                            img: "product/assis.png"
                         }
                     ]
                 },
                 Paiement: {
-                    item: []
+                    accordionItem: [
+                        {
+                            title: "Moyens de paiement (perte/vol)",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Garantie meilleur prix",
+                            content: "Assurez à vos clients que vous offrez les meilleurs produits au meilleur prix.",
+                            img: ""
+                        },
+                        {
+                            title: "Assurance emprunteur",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Protection des paiements en boucle fermée",
+                            content: "",
+                            img: ""
+                        }
+                    ]
                 },
                 Livraison: {
-                    item: []
+                    accordionItem: [
+                        {
+                            title: "Protection du colis (Dommage / perte / vol)",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Retard de livraison",
+                            content: "Faites bénéficier vos clients d'une compensation en cas de retard lors de la livraison du colis.",
+                            img: ""
+                        },
+                        {
+                            title: "Retour gratuit",
+                            content: "",
+                            img: ""
+                        }
+                    ]
                 },
                 "Appareils électroniques": {
-                    item: []
+                    accordionItem: [
+                        {
+                            title: "Mobile (Dommage / perte / vol)",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Okazoo",
+                            content: "Proposez des assurances conçues pour protéger les objets d'occasions vendus sur les plateformes de vente entre particuliers.",
+                            img: ""
+                        },
+                        {
+                            title: "Buyback",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Extension de garantie",
+                            content: "",
+                            img: ""
+                        }
+                    ]
                 },
                 Divertissement: {
-                    item: []
+                    accordionItem: [
+                        {
+                            title: "Annulation billet d’évènements",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Match ennuyeux",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Festival pluvieux",
+                            content: "",
+                            img: ""
+                        }
+                    ]
                 },
                 Mobilité: {
-                    item: []
+                    accordionItem: [
+                        {
+                            title: "Pay-As-You-Drive",
+                            content: "",
+                            img: ""
+                        },
+                        {
+                            title: "Co-voiturage",
+                            content: "Offrez la tranquillité d'esprit à vos clients grâce à une assurance spécialement conçue pour le covoiturage.",
+                            img: ""
+                        },
+                        {
+                            title: "Auto-partage",
+                            content: "",
+                            img: ""
+                        }
+                    ]
                 }
             }
         }
