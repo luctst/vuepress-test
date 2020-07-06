@@ -32,31 +32,31 @@ export default {
           {
             title: "Commercial",
             content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci iaculis justo blandit vulputate quis eu odi surum dela tcha.",
+              "Le département commercial développe notre portefeuille de partenariats et construit des relations commerciales durables.",
             img: "group-3065@2x.png"
           },
           {
             title: "Marketing",
             content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci iaculis justo blandit vulputate quis eu odi surum dela tcha.",
+              "Le département marketing coordonne de développement de nouveaux produits innovants pour nos partenaires.",
             img: "group-3065@2x.png"
           },
           {
             title: "IT",
             content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci iaculis justo blandit vulputate quis eu odi surum dela tcha.",
+              "Composé de dev ops, de full stack developer ou encore d’UX designer, l'IT développe, documente, test et déploie les nouvelles fonctionnalités sur notre plateforme d'Insurance-As-A-Service.",
             img: "group-3065@2x.png"
           },
           {
             title: "Juridique",
             content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci iaculis justo blandit vulputate quis eu odi surum dela tcha.",
+              "Le département juridique accompagne la démarche d'innovation du reste des équipes Moonshot-Internet pour garantir le respect des contraintes réglementaires.",
             img: "group-3065@2x.png"
           },
           {
             title: "Actuariat",
             content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel orci iaculis justo blandit vulputate quis eu odi surum dela tcha.",
+              "Le département data et actuariat éclaire les équipes Moonshot-Internet en transformant les data en information permettant de mieux comprendre les usages de nos clients ou encore le risque de sinistralité.",
             img: "group-3065@2x.png"
           }
         ]
