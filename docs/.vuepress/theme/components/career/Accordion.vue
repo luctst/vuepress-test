@@ -14,8 +14,8 @@
                 </div>
             </div>
         </div>
-        <div class="accordion--img--desktop" v-if="mapDataToProps.imgDesktop">
-            <img :src="mapDataToProps.imgDesktop">
+        <div class="accordion--img--desktop" v-if="accordionItemActive !== null">
+            <img :src="mapDataToProps.accordionItem[accordionItemActive].img">
         </div>
     </section>
 </template>
@@ -82,6 +82,7 @@ export default {
 
                 p {
                     color: #0e2244;
+                    font-family: "gotham-rounded";
                     line-height: 1.25;
                 }
 
