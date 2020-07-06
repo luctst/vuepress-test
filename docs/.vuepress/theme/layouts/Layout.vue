@@ -120,34 +120,42 @@ export default {
         imgDesktop: "group-3065@2x.png",
         accordionItem: [
           {
-            title: "Voyage",
+            title: "Acteurs du voyage",
+            img: "group-3065@2x.png",
+            content: "Offrez une expérience voyage en toute tranquillité à vos clients grâce à une protection complète."
+          },
+          {
+            title: "E-commercants",
             img: "group-3065@2x.png",
             content:
               "Retard de livraison de colis Livraison non conforme ou défectueuse Retour de produits"
           },
           {
-            title: "E-commerce",
+            title: "Services bancaires",
             img: "group-3065@2x.png",
             content:
-              "Retard de livraison de colis Livraison non conforme ou défectueuse Retour de produits"
+              "Proposez des assurances sur votre marketplace financière, ou directement intégrées à vos comptes premium."
           },
           {
-            title: "Paiement",
+            title: "Economie des platforms",
             img: "group-3065@2x.png",
             content:
-              "Retard de livraison de colis Livraison non conforme ou défectueuse Retour de produits"
+              "Protégez votre communauté d'utilisateur avec des assurances dédiées sur-mesure."
           },
           {
-            title: "Mobile",
+            title: "Acteurs de l'événementiel",
             img: "group-3065@2x.png",
-            content:
-              "Retard de livraison de colis Livraison non conforme ou défectueuse Retour de produits"
+            content: "Offrez à vos clients une expérience en toute confiance lors de l'achat de billet pour des événements  grâce à une protection complète."
           },
           {
-            title: "Entertainment",
+            title: "Distributeurs d'énergie",
             img: "group-3065@2x.png",
-            content:
-              "Retard de livraison de colis Livraison non conforme ou défectueuse Retour de produits"
+            content: "Exploitez le potentiel de la smartgrid avec l'intégration d'assurances innovantes."
+          },
+          {
+            title: "Co-création",
+            img: "group-3065@2x.png",
+            content: "A travers notre product factory, nous (co)-créons des produits d’assurance sur-mesure entre 30 et 90 jours."
           }
         ]
       }
