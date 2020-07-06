@@ -11,7 +11,7 @@
             <div v-if="showNavigation" class="container nav--sm">
                 <ul>
                   <li>Nos solutions</li>
-                  <li>Nos produits</li>
+                  <li :style="$route.path === '/products.html' ? 'color:#1717ff' : ''">Nos produits</li>
                   <li>Notre technologie</li>
                   <li>Qui sommes-nous ?</li>
                   <li>Contact</li>
@@ -19,7 +19,7 @@
             </div>
             <ul class="nav-desktop">
                 <li>Nos solutions</li>
-                <li @click="menuDropdown('produit')">
+                <li @click="menuDropdown('produit')" :style="$route.path === '/products.html' ? 'color:#1717ff' : ''">
                     Nos produits
                     <div v-if="showDropdown" class="dropdown">
                         <ul>
