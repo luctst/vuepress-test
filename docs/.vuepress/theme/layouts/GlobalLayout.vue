@@ -54,7 +54,7 @@ export default {
       case "/career.html":
         this.floatLineTitle = "Trouvez votre emploi <br/>chez Moonshot";
         this.floatLineDescription = "Rejoignez une équipe jeune, dynamique et débordante d’imagination pour révolutionner le secteur de l’assurance.";
-        this.floatLineImage = "career/group-5@2x.png";
+        this.floatLineImage = "career/pg-produit-travel-mob@2x.png";
         break;
       case "/presse.html":
         this.floatLineTitle = "Presse";
@@ -62,13 +62,14 @@ export default {
         this.floatLineImage = "presse/presse-bg@2x.png";
         break;
       case "/products.html":
-        this.floatLineTitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+        this.floatLineTitle = "Une gamme complète d’assurance totalement digitale couvrant les nouveaux usages.";
         this.floatLineDescription = "Aliquam pulvinar mi neque, id condimentum ex viverra sed. Phasellus tempor lectus quam, quis blandit lorem";
         this.floatLineImage = "product/illus_header@2x.png";
+        break;
       case "/contact.html":
         this.floatLineTitle = "Laissez-nous un message !";
         this.floatLineDescription = "Nos équipes commerciales et support sont à votre disposition pour répondre à vos questions. N’hésitez pas à nous contacter et nous reviendrons vers vous dès que possible.";
-        this.floatLineImage = "contact/pg-produit-travel-mob@2x.png";
+        this.floatLineImage = "contact/illus-contact@2x.png";
       default:
         break;
     }
