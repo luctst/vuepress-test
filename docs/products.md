@@ -1,3 +1,3 @@
 ---
-layout: Product
+layout: Products
 ---
