@@ -1,20 +1,18 @@
 <template>
     <main>
-        <section class="products--gamme container">
-            <div v-for="(product, i) in productsGamme" :key="i" :style="productSelect === product ? 'background-color:#eefdff;border-color:#eefdff;' : ''" @click="changeProduct(product)">
-                <p><a :style="productSelect === product ? 'color:#09c0d3;' : ''">{{product}}</a></p>
-            </div>
-        </section>
+        <FloatNav :navData="{items: [...productsGamme], itemActive: productSelect}"/>
         <Accordion :mapDataToProps="accordionData[productSelect]"/>
     </main>
 </template>
 
 <script>
 import Accordion from "../components/career/Accordion";
+import FloatNav from "../components/FloatNav";
 
 export default {
     components: {
         Accordion,
+        FloatNav
     },
     data() {
         return {
@@ -190,44 +188,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-    .products--gamme {
-        display: flex;
-
-        div {
-            border: 1px solid #c3cee2;
-            border-radius: 20px;
-
-            p {
-                color: #c3cee2;
-                font-family: "gotham-rounded";
-                margin: 0;
-                text-align: center;
-            }
-
-            :hover {
-                cursor: pointer;
-            }
-        }
-    }
-}
-
 @media screen and (min-width: 1200px) {
     main {
         margin-top: 6%;
-
-        .products--gamme {
-            div {
-                padding: 8px 22px;
-                margin-right: 2%;
-
-                p {
-                    a {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
 
         .accordion {
             padding-bottom: 0;
