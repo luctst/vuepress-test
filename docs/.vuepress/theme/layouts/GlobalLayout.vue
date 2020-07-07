@@ -57,9 +57,9 @@ export default {
         this.floatLineImage = "career/pg-produit-travel-mob@2x.png";
         break;
       case "/presse.html":
-        this.floatLineTitle = "Presse";
-        this.floatLineDescription = "Moonshot-Internet is full of exciting challenges. Here you can find everything you need to know about our latest announcements and media coverage, as well as downloading our press kit.";
-        this.floatLineImage = "presse/presse-bg@2x.png";
+        this.floatLineTitle = "Espace Presse";
+        this.floatLineDescription = "Moonshot-Internet est plein de défis passionnants Vous trouverez ici tout ce que vous devez savoir sur nos dernières annonces et notre presence dans la presse, ainsi que notre dossier de presse.";
+        this.floatLineImage = "presse/group-39@2x.png";
         break;
       case "/products.html":
         this.floatLineTitle = "Une gamme complète d’assurance totalement digitale couvrant les nouveaux usages.";
