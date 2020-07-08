@@ -1,9 +1,9 @@
 <template>
   <section class="float--nav container">
     <section class="desktop">
-      <div v-for="(l, i) in navData.items" :key="i">
+      <div v-for="(l, i) in navData.items" :key="i" :style="navData.itemActive === l ? 'background-color:#eefdff;border-color:#eefdff;' : ''" @click="$emit('updateProduct', l)">
         <p>
-          <a>{{l}}</a>
+          <a :style="navData.itemActive === l ? 'color:#09c0d3;' : ''">{{l}}</a>
         </p>
       </div>
     </section>
@@ -26,8 +26,6 @@ export default {
 <style lang="scss" scoped>
 .float--nav {
   .desktop {
-    display: flex;
-
     div {
       border: 1px solid #c3cee2;
       border-radius: 20px;
@@ -72,5 +70,49 @@ export default {
             display: block;
         }
     }
+}
+
+@media screen and (min-width: 460px) {
+  .float--nav {
+    margin-top: 12%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .float--nav {
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .float--nav {
+    .desktop {
+      display: flex;
+
+      div {
+        margin-right: 1%;
+        padding: 5px 7px;
+
+        p {
+          font-size: .9em;
+        }
+      }
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .float--nav {
+    margin-top: 8%;
+
+    .desktop {
+      div {
+        padding: 8px 12px;
+      }
+    }
+  }
 }
 </style>
