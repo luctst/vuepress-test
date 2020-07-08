@@ -1,6 +1,6 @@
 <template>
     <main>
-        <FloatNav :navData="{items: [...productsGamme], itemActive: productSelect}"/>
+        <FloatNav :navData="{items: [...productsGamme], itemActive: productSelect}" @updateProduct="changeProduct"/>
         <Accordion :mapDataToProps="accordionData[productSelect]"/>
     </main>
 </template>
