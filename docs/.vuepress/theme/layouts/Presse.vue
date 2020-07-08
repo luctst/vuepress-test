@@ -4,26 +4,37 @@
             <h2>Informations médias</h2>
             <p>Pour toutes demandes de presse, de prise de paroles ou d’interviews, merci de contacter <span>press@moonshot-internet.com</span></p>
         </section>
-        <section class="articles">
+        <section>
             <h2>Nos articles publiés dans la presse</h2>
-            <div class="articles--category">
-                <span>All</span>
-                <span>Presses</span>
-                <span>Blog</span>
-            </div>
-            <div class="content"></div>
+            <FloatNav :navData="{items: [...category], itemActive: categoryActive}" @updateProduct="changeProduct"/>
         </section>
     </main>
 </template>
 
 <script>
+import FloatNav from "../components/FloatNav";
+import PresseData from "../presse.json"
+
 export default {
+    components: {
+        FloatNav
+    },
     data () {
         return {
-            articles: {
-                presse: [],
-                blog: []
-            }
+            categoryActive: "All",
+            category: [
+                "All",
+                "Presse",
+                "Blog"
+            ],
+            presseData: [...PresseData],
+            blogData: []
+        }
+    },
+    methods: {
+        changeProduct (p) {
+            if (this.categoryActive === p) return false;
+            this.categoryActive = p;
         }
     }
 }
