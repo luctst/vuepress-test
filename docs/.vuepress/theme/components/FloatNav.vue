@@ -8,7 +8,7 @@
       </div>
     </section>
     <section class="mobile">
-      <select>
+      <select @change="$emit('updateProduct', $event.target.value)">
         <option v-for="(e, i) in navData.items" :key="i">{{e}}</option>
       </select>
     </section>
@@ -111,6 +111,16 @@ export default {
     .desktop {
       div {
         padding: 8px 12px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .float--nav {
+    .desktop {
+      div {
+        margin-right: 3%;
       }
     }
   }
