@@ -140,6 +140,39 @@ main {
         }
     }
   }
+
+  .kit--media {
+    display: flex;
+    
+    div {
+      img {
+        height: auto;
+      }
+
+      h2 {
+        color: #0e2244;
+        font-family: "gotham-bold";
+        margin: 0;
+      }
+
+      p {
+        color: #0e2244;
+        font-family: "gotham-rounded";
+        margin: 0;
+      }
+    }
+
+    button {
+      background-image: linear-gradient(to bottom, #4040ff, #1717ff);
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px 0 rgba(40, 40, 40, 0.16);
+      color: #fff;
+      font-family: "gotham-medium";
+      padding: 10px 32px;
+      width: max-content;
+    }
+  }
 }
 
 @media screen and (min-width: 300px) {
@@ -185,6 +218,30 @@ main {
             }
         }
     }
+
+    .kit--media {
+      flex-direction: column;
+
+      div {
+        img {
+          width: 24%;
+        }
+
+        h2 {
+          font-size: 1.5em;
+          margin-top: 8%;
+        }
+
+        p {
+          font-size: .9em;
+          margin-top: 4%;
+        }
+      }
+
+      button {
+        margin-top: 8%;
+      }
+    }
   }
 }
 
@@ -197,9 +254,9 @@ main {
     }
 
     .articles {
-        h2 {
-            font-size: 1.8em;
-        }
+      h2 {
+          font-size: 1.8em;
+      }
     }
   }
 }
@@ -213,6 +270,27 @@ main {
 
       p {
         font-size: 1em;
+      }
+    }
+
+    .kit--media {
+      div {
+        img {
+          width: 20%;
+        }
+
+        h2 {
+          font-size: 1.8em;
+          margin-top: 6%;
+        }
+        
+        p {
+          margin-top: 2%;
+        }
+      }
+
+      button {
+        margin-top: 6%;
       }
     }
   }
@@ -257,6 +335,27 @@ main {
             }
         }
     }
+
+    .kit--media {
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+
+      div {
+        img {
+          width: 16%;
+        }
+
+        h2 {
+          font-size: 2em;
+          margin-top: 4%;
+        }
+
+        p {
+          padding-right: 8%;
+        }
+      }
+    }
   }
 }
 
@@ -280,6 +379,26 @@ main {
                     flex: 0 0 29%;
                 }
             }
+        }
+
+        .kit--media {
+          margin-top: 8%;
+
+          div {
+            img {
+              width: 12%;
+            }
+
+            h2 {
+              margin-top: 3%;
+            }
+
+            p {
+              font-size: 1em;
+              margin-top: 1%;
+              padding-right: 16%;
+            }
+          }
         }
     }
 }
