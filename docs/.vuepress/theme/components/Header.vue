@@ -75,6 +75,7 @@ export default {
 <style lang="scss" scoped>
 header {
     align-items: center;
+    box-sizing: border-box;
     display: flex;
     height: 11vh;
     justify-content: space-between;
@@ -83,7 +84,7 @@ header {
     padding: 0 15px;
     transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;
     transition: background-color 0.3s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;
-    width: inherit;
+    width: 100%;
     z-index: 1;
 
     div:first-child {
