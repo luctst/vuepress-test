@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Accordion from "../components/career/Accordion";
+import Accordion from "../components/Accordion";
 import FloatNav from "../components/FloatNav";
 
 export default {
