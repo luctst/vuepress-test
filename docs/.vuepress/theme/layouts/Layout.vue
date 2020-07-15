@@ -88,7 +88,7 @@
 </template>
 
 <script>
-import Accordion from "../components/career/Accordion";
+import Accordion from "../components/Accordion";
 import MshMedia from "../components/MshMedia";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
