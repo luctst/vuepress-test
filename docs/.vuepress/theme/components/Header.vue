@@ -13,7 +13,7 @@
                   <li>Nos solutions</li>
                   <li :style="$route.path === '/products.html' ? 'color:#1717ff' : ''">Nos produits</li>
                   <li>Notre technologie</li>
-                  <li>Qui sommes-nous ?</li>
+                  <li :style="$route.path === '/about.html' ? 'color:#1717ff' : ''">Qui sommes-nous ?</li>
                   <li>Contact</li>
                 </ul>
             </div>
@@ -28,7 +28,7 @@
                     </div>
                 </li>
                 <li>Notre technologie</li>
-                <li>Qui sommes-nous ?</li>
+                <li :style="$route.path === '/about.html' ? 'color:#1717ff' : ''">Qui sommes-nous ?</li>
                 <li>Contact</li>
             </ul>
         </nav>
