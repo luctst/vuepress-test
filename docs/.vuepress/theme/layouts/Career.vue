@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Accordion from "../components/career/Accordion";
+import Accordion from "../components/Accordion";
 
 export default {
   components: {
