@@ -70,6 +70,11 @@ export default {
         this.floatLineTitle = "Laissez-nous un message !";
         this.floatLineDescription = "Nos équipes commerciales et support sont à votre disposition pour répondre à vos questions. N’hésitez pas à nous contacter et nous reviendrons vers vous dès que possible.";
         this.floatLineImage = "contact/illus-contact@2x.png";
+      case "/about.html":
+        this.floatLineTitle = "Qui sommes-nous ?";
+        this.floatLineDescription = "";
+        this.floatLineImage = "about/group@2x.png";
+        break;
       default:
         break;
     }
